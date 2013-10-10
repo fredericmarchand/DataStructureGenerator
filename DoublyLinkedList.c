@@ -30,6 +30,7 @@ void add_to_back(/*data*/)
     else 
     {
         last->next = new_node;
+        new_node->prev = last;
         new_node->next = NULL;
         last = new_node;
         ++count;
@@ -54,7 +55,7 @@ void add_to_front(/*data*/)
         new_node->next = DoublyLinkedList;
         DoublyLinkedList->prev = new_node;
         DoublyLinkedList = new_node;
-        count++;
+        ++count;
     }
 }
 
@@ -67,7 +68,7 @@ struct DoublyLinkedListNode *get(int index)
     if (index < count / 2)
     {
         temp_node = DoublyLinkedList;
-        for (j = 0; j < index; ++j)
+        for (j = 0; j <= index; ++j)
         {
             temp_node = temp_node->next;
         }
@@ -119,19 +120,18 @@ int main()
     int i;
     init();
     printf("count: %d\n", count);
-    for (i = 0; i < 1000; ++i)
+    for (i = 0; i < 100000; ++i)
         add_to_front();
     printf("count: %d\n", count);
-    for (i = 0; i < 1000; ++i)
+    for (i = 0; i < 100000; ++i)
         add_to_back();
     printf("count: %d\n", count);
-    remove_by_index(1990);
 
-/*    for (i = 0; i < 2000; ++i)
+    for (i = 0; i < 200000; ++i)
     {
-        if ((i % 3) == 0)
+        if ((i % 2) == 0)
             remove_by_index(i);
-    }*/
+    }
     printf("count: %d\n", count);
     delete_list();
     printf("count: %d\n", count); 

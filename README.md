@@ -2,7 +2,7 @@
 Deque
 Red Black Tree
 Binary Search Tree
-B Tree
+B-Tree
 Queue
 Hash Map
 Heap
@@ -13,7 +13,7 @@ Merge Sort
 Quick Sort
 Heap Sort
 
-Tree Traversal Algorithms
+#Tree Traversal Algorithms
 Preorder Traversal
 Inorder Traversal
 Postorder Traversal
