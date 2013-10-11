@@ -32,4 +32,7 @@ struct StackNode {
     struct StackNode *next;
 };
 
-
+struct QueueNode {
+    struct QueueNode *next;
+    struct QueueNode *prev;
+};

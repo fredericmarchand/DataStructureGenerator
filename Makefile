@@ -1,4 +1,4 @@
-all:	DoublyLinkedList SinglyLinkedList Stack Generator
+all:	DoublyLinkedList SinglyLinkedList Stack Queue Generator
 
 Generator:			Generator.o
 					gcc Generator.o -o Generator
@@ -12,6 +12,9 @@ DoublyLinkedList:	structs.h DoublyLinkedList.o
 SinglyLinkedList:	structs.h SinglyLinkedList.o
 					gcc SinglyLinkedList.o -o SinglyLinkedList
 
+Queue:				structs.h Queue.o
+					gcc Queue.o -o Queue
+
 Generator.o:		Generator.c
 					gcc -c Generator.c -o Generator.o
 
@@ -24,5 +27,8 @@ DoublyLinkedList.o:	structs.h DoublyLinkedList.c
 SinglyLinkedList.o:	structs.h SinglyLinkedList.c
 					gcc -c SinglyLinkedList.c -o SinglyLinkedList.o
 
+Queue.o:			structs.h Queue.c
+					gcc -c Queue.c -o Queue.o
+
 clean:
-			rm -rf *.o SinglyLinkedList DoublyLinkedList Stack Generator
+			rm -rf *.o SinglyLinkedList DoublyLinkedList Stack Queue Generator

@@ -10,6 +10,11 @@ void init()
     count = 0;
 }
 
+struct StackNode *peek()
+{
+    return Stack;
+}
+
 void push(/*data*/)
 {
     struct StackNode *curr_node = Stack;
