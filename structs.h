@@ -18,11 +18,13 @@ struct DoublyLinkedListNode {
 };
 
 struct BinaryTreeNode {
+    struct BinaryTreeNode *parent;
     struct BinaryTreeNode *left;
     struct BinaryTreeNode *right;
 };
 
 struct RedBlackTreeNode {
+    struct RedBlackTreeNode *parent;
     struct RedBlackTreeNode *left;
     struct RedBlackTreeNode *right;
     enum node_color color;

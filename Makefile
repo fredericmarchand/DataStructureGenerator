@@ -1,4 +1,4 @@
-all:	DoublyLinkedList SinglyLinkedList Stack Queue Generator
+all:	DoublyLinkedList SinglyLinkedList Stack Queue Generator RedBlackTree
 
 Generator:			Generator.o
 					gcc Generator.o -o Generator
@@ -15,6 +15,9 @@ SinglyLinkedList:	structs.h SinglyLinkedList.o
 Queue:				structs.h Queue.o
 					gcc Queue.o -o Queue
 
+RedBlackTree:		structs.h RedBlackTree.o
+					gcc RedBlackTree.o -o RedBlackTree
+
 Generator.o:		Generator.c
 					gcc -c Generator.c -o Generator.o
 
@@ -30,5 +33,8 @@ SinglyLinkedList.o:	structs.h SinglyLinkedList.c
 Queue.o:			structs.h Queue.c
 					gcc -c Queue.c -o Queue.o
 
+RedBlackTree.o:		structs.h RedBlackTree.c
+					gcc -c RedBlackTree.c -o RedBlackTree.o
+
 clean:
-			rm -rf *.o SinglyLinkedList DoublyLinkedList Stack Queue Generator
+			rm -rf *.o SinglyLinkedList DoublyLinkedList Stack Queue RedBlackTree Generator
