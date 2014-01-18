@@ -61,8 +61,8 @@ void add_to_front(/*data*/)
 
 struct DoublyLinkedListNode *get(int index)
 {
-    if (DoublyLinkedList == NULL) return;
-    if (index >= count) return;
+    if (DoublyLinkedList == NULL) return NULL;
+    if (index >= count) return NULL;
     int i = 0, j;
     struct DoublyLinkedListNode *temp_node;
     if (index < count / 2)

@@ -2,6 +2,17 @@
 #include <string.h>
 #include <stdio.h>
 
+#define SINGLYLINKEDLIST    1
+#define DOUBLYLINKEDLIST    2
+#define STACK               3
+#define QUEUE               4
+#define DEQUE               5
+#define REDBLACKTREE        6
+#define BTREE               7
+#define BINARYSEARCHTREE    8
+#define HEAP                9
+#define HASHMAP             10
+
 enum node_color {
     BLACK = 0,
     RED   = 1

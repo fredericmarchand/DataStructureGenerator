@@ -144,7 +144,21 @@ void insert(/*data*/)
     new_node->parent = NULL;
     new_node->left = NULL;
     new_node->right = NULL;
-    /* TODO add to tree code here */
+    new_node->color = RED;
+
+    if (RedBlackTree == NULL)
+    {
+        RedBlackTree = new_node;
+    }
+    else
+    {
+        struct RedBlackTreeNode *temp = RedBlackTree;
+        if (temp->left == NULL)
+        {
+            
+        }
+    }
+    insert_case1(new_node);
 }
 
 void insert_case1(struct RedBlackTreeNode *node)
